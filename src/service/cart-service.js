@@ -1,9 +1,12 @@
 /*
-* @Author: 12574
-* @Date:   2018-04-19 20:54:38
+* @Author: Rosen
+* @Date:   2017-05-17 18:55:04
 * @Last Modified by:   12574
-* @Last Modified time: 2018-04-19 20:55:09
+* @Last Modified time: 2018-04-22 09:49:22
 */
+
+'use strict';
+
 var _mm = require('util/mm.js');
 
 var _cart = {
