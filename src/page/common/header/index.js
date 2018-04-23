@@ -2,15 +2,16 @@
 * @Author: 12574
 * @Date:   2018-04-19 19:23:28
 * @Last Modified by:   12574
-* @Last Modified time: 2018-04-19 19:51:35
+* @Last Modified time: 2018-04-22 18:29:18
 */
 require('./index.css');
 var _mm     = require('util/mm.js');
 // 通用页面头部
 var header = {
     init : function(){
-        this.bindEvent();
-        return this;
+      this.onload();
+      this.bindEvent();
+      return this;
     },
     onload: function(){
     	var keyword = _mm.getUrlParam('keyword');
