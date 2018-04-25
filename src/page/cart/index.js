@@ -2,7 +2,7 @@
 * @Author: 12574
 * @Date:   2018-04-23 11:07:11
 * @Last Modified by:   12574
-* @Last Modified time: 2018-04-23 11:08:14
+* @Last Modified time: 2018-04-23 14:57:41
 */
 
 'use strict';
@@ -129,7 +129,7 @@ var page = {
         $(document).on('click', '.btn-submit', function(){
             // 总价大于0，进行提交
             if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
-                window.location.href = './confirm.html';
+                window.location.href = './order-confirm.html';
             }else{
                 _mm.errorTips('请选择商品后再提交');
             }

@@ -4,9 +4,9 @@
   "description": "mmall",
   "main": "index.js",
   "scripts": {
-    "dev_mac": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
+    "dev_win": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
     "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
-    "dist_mac": "WEBPACK_ENV=online webpack -p",
+    "dist_win": "WEBPACK_ENV=online webpack -p",
     "dist": "set WEBPACK_ENV=online && webpack -p"
   },
   "repository": {
