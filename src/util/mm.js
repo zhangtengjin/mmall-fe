@@ -2,7 +2,7 @@
 * @Author: 12574
 * @Date:   2018-04-19 11:06:22
 * @Last Modified by:   12574
-* @Last Modified time: 2018-04-19 23:13:34
+* @Last Modified time: 2018-05-26 11:33:54
 */
 
 var Hogan = require('hogan');
@@ -11,7 +11,9 @@ var conf = {
 };
 var _mm = {
 	request: function(param){
+        //  缓存mm对象
 		var _this = this;
+        // 网络请求数据功能
 		$.ajax({
 			type: param.method || "get",
 			url: param.url || "",
@@ -43,14 +45,16 @@ var _mm = {
     },
      // 获取url参数
     getUrlParam : function(name){
+        //      happymmall.com/product/list?keyword=1&page=1
+        //      keyword=1&page=1
         var reg     = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
         var result  = window.location.search.substr(1).match(reg);
         return result ? decodeURIComponent(result[2]) : null;
     },
      // 渲染html模板
     renderHtml : function(htmlTemplate, data){
-        var template    = Hogan.compile(htmlTemplate),
-            result      = template.render(data);
+        var template    = Hogan.compile(htmlTemplate),      //hogan模板的编译
+            result      = template.render(data);            //hogan模板的渲染
         return result;
     },
     // 成功提示
@@ -63,7 +67,7 @@ var _mm = {
     },
     // 字段的验证，支持非空、手机、邮箱的判断
     validate : function(value, type){
-        var value = $.trim(value);
+        var value = $.trim(value);   //去掉前后空格
         // 非空验证
         if('require' === type){
             return !!value;
